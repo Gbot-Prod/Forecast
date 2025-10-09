@@ -1,0 +1,46 @@
+
+body {
+    margin: 0px;
+    background-color: #88A8D0;
+}
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+
+    border: #6885e3;
+    background-color: #6884E3;
+}
+
+h1 {
+    font-family: inter, arial, sans-serif;
+    font-style: bold;
+    color: #ffffff;
+    padding-left: 50px;
+}
+
+ul {
+    padding-right: 40px;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+#icons {
+    
+}
+
+#notepadIcon {
+    opacity: 0.4
+}
+
+textarea:focus, input:focus {
+    outline:none;
+}
