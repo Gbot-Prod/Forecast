@@ -1,4 +1,8 @@
 
+const apiKey = "1a3a92fb9bb446f294f125218250610"
+
+
+
 async function fetchData() {
     try {
         clearFields(); 
@@ -17,23 +21,8 @@ async function fetchData() {
         const pkmnName = data.name;
         const nameElement = document.getElementById("pokemonName");
         nameElement.textContent = pkmnName.charAt(0).toUpperCase() + pkmnName.slice(1);
-
-        //fetch pokemon number
-        const pkmnNumber = data.id;
-        numberElement = document.getElementById("pokemonNumber");
-        numberElement.textContent = "Pokemon no#" + pkmnNumber;
-
-        //fetch pokemon type
-        const pkmnType = data.types[0].type.name;
-        const pkmnType2 = data.types[1]?.type.name || "none";
-        fetchPKMNType(pkmnType, pkmnType2);
-
-        //fetch pokemon sprite
-        const pkmnSprite = data.sprites.front_default;
-        const imgElement = document.getElementById("pokemonSprite");
-        imgElement.src = pkmnSprite;
-        imgElement.style.display = "block";
     }
+    
     catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
     }
@@ -197,17 +186,4 @@ async function fetchData() {
     }
 }
 
-function clearFields() {
-    const imgElement = document.getElementById("pokemonSprite");
-    const type1IconElement = document.getElementById("pokemonType1");
-    const type2IconElement = document.getElementById("pokemonType2");
-
-    imgElement.src = "";
-    imgElement.style.display = "none";
-
-    type1IconElement.src = "";
-    type1IconElement.style.display = "none";
-    type2IconElement.src = "";
-    type2IconElement.style.display = "none";
-}
 
