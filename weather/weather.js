@@ -1,5 +1,5 @@
 
-const apiKey = "1a3a92fb9bb446f294f125218250610"
+const apiKey = "1a3a92fb9bb446f294f125218250610";
 const weatherContainer = document.getElementById("weatherContainer");
 
 const temperature = document.getElementById("temperature");
